@@ -11,11 +11,13 @@
 
 ## GitHub Release
 
-> Use [release-drafter](https://github.com/release-drafter/release-drafter)
+> Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
+
+**Note** Must first have the configuration file in the default branch
 
 refs:
 
 -   https://github.com/release-drafter/release-drafter
--   https://github.com/semantic-release/cli#github-actions
 -   https://github.com/actions/create-release
+-   https://github.com/semantic-release/cli#github-actions
 -   https://github.com/yyx990803/release-tag
