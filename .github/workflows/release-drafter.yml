@@ -1,7 +1,9 @@
 name: Release Drafter
 
 on:
-  push
+  push:
+    branches:
+      - master
   pull_request:
     types: [opened, reopened, synchronize]
 
