@@ -29,3 +29,13 @@ refs:
 -   https://github.com/actions/create-release
 -   https://github.com/semantic-release/cli#github-actions
 -   https://github.com/yyx990803/release-tag
+
+## NPM Publish
+
+```bash
+gh download yuler/actions npm-publish.yml
+```
+
+refs:
+
+-   https://docs.github.com/en/actions/guides/publishing-nodejs-packages
