@@ -1,0 +1,29 @@
+{
+  "name": "@yuler/actions",
+  "version": "0.2.0",
+  "description": "This package is collection some GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo test"
+  },
+  "files": [
+    ".github"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuler/actions.git"
+  },
+  "keywords": [
+    "actions",
+    "github-action"
+  ],
+  "author": "yuler <is.yuler@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuler/actions/issues"
+  },
+  "homepage": "https://github.com/yuler/actions#readme"
+}
