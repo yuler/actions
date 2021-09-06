@@ -1,8 +1,9 @@
 {
   "name": "@yuler/actions",
   "version": "0.2.0",
-  "description": "This package is collection some GitHub Actions",
+  "description": "This package is collection some GitHub Actions. No export of anything.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo test"
   },
