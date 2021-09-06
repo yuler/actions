@@ -9,9 +9,17 @@
 -   [Act](https://github.com/nektos/act) - Run your GitHub Actions locally
 -   [TypeScript Action](https://github.com/actions/typescript-action) - A TypeScript Action Template
 
+## gh download
+
+The `gh download` command is come from [gh-download](https://github.com/yuler/gh-download)
+
 ## GitHub Release
 
 > Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
+
+```bash
+gh download yuler/actions .github/release-drafter-config.yml .github/workflows/release-drafter.yml
+```
 
 **Note** Must first have the configuration file in the default branch
 
