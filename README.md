@@ -33,6 +33,11 @@ refs:
 ## NPM Publish
 
 ```bash
+# Add NPM_TOKEN secret from `~/.npmrc`
+gh secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')"
+# Or add alias
+gh alias set secret_add_npm_token "secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')""
+# Download file
 gh download yuler/actions npm-publish.yml
 ```
 
