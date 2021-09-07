@@ -28,7 +28,7 @@ https://docs.github.com/en/actions/guides/building-and-testing-nodejs-or-python?
 > Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
 
 ```bash
-gh download yuler/actions .github/release-drafter-config.yml .github/workflows/release-drafter.yml
+gh download yuler/actions .github/release-drafter.yml .github/workflows/drafter.yml
 ```
 
 **Note** Must first have the configuration file in the default branch
