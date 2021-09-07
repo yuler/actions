@@ -13,6 +13,16 @@
 
 The `gh download` command is come from [gh-download](https://github.com/yuler/gh-download)
 
+## Node.js CI
+
+```bash
+gh download yuler/actions .github/workflows/nodejs-ci.yml
+```
+
+refs:
+
+https://docs.github.com/en/actions/guides/building-and-testing-nodejs-or-python?langId=nodejs
+
 ## GitHub Release
 
 > Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
@@ -38,7 +48,7 @@ gh secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registr
 # Or add alias
 gh alias set secret_add_npm_token "secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')""
 # Download file
-gh download yuler/actions npm-publish.yml
+gh download yuler/actions .github/workflows/npm-publish.yml
 ```
 
 refs:
