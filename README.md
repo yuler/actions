@@ -54,3 +54,13 @@ gh download yuler/actions .github/workflows/npm-publish.yml
 refs:
 
 -   https://docs.github.com/en/actions/guides/publishing-nodejs-packages
+
+## PR Commented Trigger
+
+```
+gh donwload yuler/actions .github/workflows/pr-commented.yml
+```
+
+refs:
+
+-   https://github.com/Khan/pull-request-comment-trigger
