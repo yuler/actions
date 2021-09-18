@@ -8,14 +8,16 @@ jobs:
   pr_commented:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - uses: yuler/pr-comment-trigger@main
         id: 'pr'
         with:
           trigger: '/trigger'
-      - name: echo
-        if: ${{ steps.pr.outputs.triggered }} # condition for skip
-        run: |
-          echo "${{ steps.pr.outputs.triggered }}"
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Wait 2 seconds # sleep 2s wait for cancel
+        run: sleep 2
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.pr.outputs.branch }}
+      - name: Echo
+        run: Echo Trigger
