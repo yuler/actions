@@ -58,7 +58,7 @@ refs:
 ## PR Commented Trigger
 
 ```
-gh donwload yuler/actions .github/workflows/pr-commented.yml
+gh download yuler/actions .github/workflows/pr-commented.yml
 ```
 
 refs:
