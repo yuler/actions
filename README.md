@@ -2,16 +2,7 @@
 
 > This repo is collection some GitHub Actions.
 
-## About GitHub Action Refs
-
--   [Official Document](https://docs.github.com/en/actions)
--   [Awesome Actions](https://github.com/sdras/awesome-actions)
--   [Act](https://github.com/nektos/act) - Run your GitHub Actions locally
--   [TypeScript Action](https://github.com/actions/typescript-action) - A TypeScript Action Template
-
-## gh download
-
-The `gh download` command is come from [gh-download](https://github.com/yuler/gh-download)
+Recommend use `gh donwload` command.[^gh-download]
 
 ## Node.js CI
 
@@ -57,10 +48,20 @@ refs:
 
 ## PR Commented Trigger
 
-```
+```bash
 gh download yuler/actions .github/workflows/pr-commented.yml
 ```
 
 refs:
 
 -   https://github.com/Khan/pull-request-comment-trigger
+
+## Related
+
+-   [Official Document](https://docs.github.com/en/actions)
+-   [actions/starter-workflows](https://github.com/actions/starter-workflows)
+-   [Awesome Actions](https://github.com/sdras/awesome-actions)
+-   [Act](https://github.com/nektos/act) - Run your GitHub Actions locally
+-   [TypeScript Action](https://github.com/actions/typescript-action) - A TypeScript Action Template
+
+[^gh-download]: The `gh download` command is come from [gh-download](https://github.com/yuler/gh-download)
