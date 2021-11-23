@@ -11,16 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         node-version: [14.x, 16.x]
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6
+
+      - name: Install dependencies & build
+        run: pnpm install
+      - run: pnpm run build --if-present
+
+      - name: Run tests
+        run: pnpm test
