@@ -7,7 +7,7 @@ Recommend use `gh donwload` command.[^gh-download]
 ## Node.js CI
 
 ```bash
-gh download yuler/actions .github/workflows/nodejs-ci.yml
+gh download yuler/actions nodejs/ci.yml
 ```
 
 refs:
