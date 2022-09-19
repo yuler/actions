@@ -19,7 +19,7 @@ https://docs.github.com/en/actions/guides/building-and-testing-nodejs-or-python?
 > Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
 
 ```bash
-gh download yuler/actions .github/release-drafter.yml .github/workflows/drafter.yml
+gh download yuler/actions .github/release-drafter.yml --outdir .github/workflows
 ```
 
 **Note** Must first have the configuration file in the default branch
@@ -39,7 +39,7 @@ gh secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registr
 # Or add alias
 gh alias set secret_add_npm_token "secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')""
 # Download file
-gh download yuler/actions .github/workflows/npm-publish.yml
+gh download yuler/actions nodejs/npm-publish.yml --outdir .github/workflows
 ```
 
 refs:
