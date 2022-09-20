@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies & Build
         run: pnpm install
-      - run: pnpm run build --if-present
+      - run: pnpm run --if-present build
 
       - name: Run tests
-        run: pnpm run test --if-present
+        run: pnpm run --if-present test
