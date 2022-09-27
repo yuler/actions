@@ -2,19 +2,33 @@
 
 > This repo is collection some GitHub Actions.
 
-Recommend use `gh donwload` command.[^gh-download]
+Recommend use `gh download`[^gh-download] command.
 
-## Node.js CI
+## Node.js
+
+### CI
 
 ```bash
-gh download yuler/actions nodejs/ci.yml
+gh download yuler/actions nodejs/ci.yml --outdir .github/workflows
 ```
 
-refs:
+refs: https://docs.github.com/en/actions/guides/building-and-testing-nodejs-or-python?langId=nodejs
 
-https://docs.github.com/en/actions/guides/building-and-testing-nodejs-or-python?langId=nodejs
+### NPM Publish
 
-## GitHub Release
+```bash
+# Add NPM_TOKEN secret from `~/.npmrc`
+gh alias set add-npm-token "secret set NPM_TOKEN --body "$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')""
+gh add-npm-token
+# Download file
+gh download yuler/actions nodejs/npm-publish.yml --outdir .github/workflows
+```
+
+refs: https://docs.github.com/en/actions/guides/publishing-nodejs-packages
+
+## GitHub
+
+### Release
 
 > Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
 
@@ -31,22 +45,7 @@ refs:
 -   https://github.com/semantic-release/cli#github-actions
 -   https://github.com/yyx990803/release-tag
 
-## NPM Publish
-
-```bash
-# Add NPM_TOKEN secret from `~/.npmrc`
-gh secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')"
-# Or add alias
-gh alias set secret_add_npm_token "secret set NPM_TOKEN -b"$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')""
-# Download file
-gh download yuler/actions nodejs/npm-publish.yml --outdir .github/workflows
-```
-
-refs:
-
--   https://docs.github.com/en/actions/guides/publishing-nodejs-packages
-
-## PR Commented Trigger
+### PR Commented Trigger
 
 ```bash
 gh download yuler/actions .github/workflows/pr-commented.yml
