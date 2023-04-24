@@ -9,7 +9,7 @@ Recommend use `gh download`[^gh-download] command.
 ### [ci.yml](./nodejs/ci.yml)
 
 ```bash
-gh https://github.com/yuler/actions/blob/main/nodejs/ci.yml --outdir .github/workflows
+gh dl https://github.com/yuler/actions/blob/main/nodejs/ci.yml --outdir .github/workflows
 ```
 
 Related:
@@ -19,7 +19,7 @@ Related:
 ### [npm-publish](./nodejs/npm-publish.yml)
 
 ```bash
-gh https://github.com/yuler/actions/blob/main/nodejs/npm-publish.yml --outdir .github/workflows
+gh dl https://github.com/yuler/actions/blob/main/nodejs/npm-publish.yml --outdir .github/workflows
 # Add NPM_TOKEN secret from `~/.npmrc`
 gh alias set add-npm-token "secret set NPM_TOKEN --body "$(cat ~/.npmrc | grep _authToken | sed 's/\/\/registry.npmjs.org\/:_authToken=//')""
 gh add-npm-token
@@ -34,14 +34,14 @@ Related:
 ### [sync-gitlab](./misc/sync-gitlab.yml)
 
 ```bash
-gh https://github.com/yuler/actions/blob/main/misc/sync-gitlab.yml --outdir .github/workflows
+gh dl https://github.com/yuler/actions/blob/main/misc/sync-gitlab.yml --outdir .github/workflows
 gh secret set GITLAB_TOKEN <$YOUR_GITLAB_TOKEN>
 ```
 
 ### [cron](./misc/cron.yml)
 
 ```bash
-gh https://github.com/yuler/actions/blob/main/misc/cron.yml --outdir .github/workflows
+gh dl https://github.com/yuler/actions/blob/main/misc/cron.yml --outdir .github/workflows
 gh secret set GITLAB_TOKEN <$YOUR_GITLAB_TOKEN>
 ```
 
@@ -54,8 +54,8 @@ Related:
 > Recommend use [release-drafter](https://github.com/release-drafter/release-drafter) action.
 
 ```bash
-gh https://github.com/yuler/actions/blob/main/misc/drafter.yml --outdir .github/workflows
-gh https://github.com/yuler/actions/blob/main/misc/release-drafter.yml --outdir .github
+gh dl https://github.com/yuler/actions/blob/main/misc/drafter.yml --outdir .github/workflows
+gh dl https://github.com/yuler/actions/blob/main/misc/release-drafter.yml --outdir .github
 ```
 
 **Note** Must first have the configuration file in the default branch
