@@ -65,18 +65,6 @@ Related:
 - <https://github.com/semantic-release/cli#github-actions>
 - <https://github.com/yyx990803/release-tag>
 
-<!--
-### PR Commented Trigger
-
-```bash
-gh download yuler/actions .github/workflows/pr-commented.yml
-```
-
-Related:
-
-- <https://github.com/Khan/pull-request-comment-trigger>
--->
-
 ## Related
 
 - [Awesome Actions](https://github.com/sdras/awesome-actions)
