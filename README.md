@@ -29,6 +29,16 @@ Related:
 
 - <https://docs.github.com/en/actions/guides/publishing-nodejs-packages>
 
+## Miniprogram
+
+### [miniprogram-upload](./miniprogram/miniprogram-upload.yml)
+
+```bash
+gh dl https://github.com/yuler/actions/blob/main/miniprogram/miniprogram-upload.yml --outdir .github/workflows
+gh secret set MINIPROGRAM_APP_ID <$appId>
+gh secret set MINIPROGRAM_PRIVATE_KEY < apps/mini/private.<$appId>.key
+```
+
 ## Misc
 
 ### [sync-gitlab](./misc/sync-gitlab.yml)
