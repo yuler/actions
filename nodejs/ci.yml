@@ -13,24 +13,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [16.x, 18.x]
 
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 7
+          # Or Use `.npmrc` instead of `node-version`
+          # node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
       - name: Install dependencies & Build
-        run: pnpm install
-      - run: pnpm run --if-present build
+        run: |
+          corepack enable
+          pnpm install
+          pnpm run --if-present build
 
       - name: Run tests
         run: pnpm run --if-present test
