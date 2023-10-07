@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'apps/mini/**'
+      - 'src/**'
       - '.github/workflows/mini*'
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
             echo "##########"
             exit 1
           else
-            echo "$MINIPROGRAM_PRIVATE_KEY" > apps/mini/private.$MINIPROGRAM_APP_ID.key
+            echo "$MINIPROGRAM_PRIVATE_KEY" > private.$MINIPROGRAM_APP_ID.key
           fi
 
       - name: Use Node.js 18
