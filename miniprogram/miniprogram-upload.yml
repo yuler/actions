@@ -54,7 +54,7 @@ jobs:
         with:
           script: |
             const fs = require('fs')
-            const result = fs.readFileSync('./apps/mini/upload-result.json')
+            const result = fs.readFileSync('./upload-result.json')
             const body = '🚀  Upload Result:\n```js\n' + result + '\n```'
             github.rest.repos.createCommitComment({
               owner: context.repo.owner,
