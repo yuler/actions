@@ -1,0 +1,23 @@
+name: CI
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+      - name: Setup db
+        run: bin/rails db:prepare
+      - name: Asset precompile
+        run: bin/rails assets:precompile
+      - name: Run test
+        run: bin/rails test
+      - name: Run brakeman
+        run: bundle exec brakeman

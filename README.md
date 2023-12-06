@@ -81,3 +81,11 @@ Related:
 - [Act](https://github.com/nektos/act) - Run your GitHub Actions locally
 
 [^gh-download]: The `gh download` command is come from [gh-download](https://github.com/yuler/gh-download)
+
+## Rails
+
+### [ci.yml](./rails/ci.yml)
+
+```bash
+gh dl https://github.com/yuler/actions/blob/main/rails/ci.yml --outdir .github/workflows
+```
